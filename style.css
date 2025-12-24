@@ -1,0 +1,149 @@
+
+.cafe-logo img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+
+
+/*  bike animation */
+
+/* 1. Root Variables & Theme Colors */
+:root {
+    --primary: #f9de46;    /* Brand Yellow */
+    --secondary: #2D2A26;  /* Deep Coffee Black */
+    --accent: #e67e22;     /* Food Orange */
+    --white: #ffffff;
+    --black: #000000;
+}
+
+/* 2. Global Resets & Typography */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--black);
+    overflow-x: hidden;
+}
+
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+/* 3. Navbar & Logo Branding */
+.bg-logo-yellow { 
+    background-color: var(--primary); 
+}
+
+.logo-container {
+    height: 3.5rem; /* h-14 */
+    width: 3.5rem;  /* w-14 */
+    background-color: var(--black);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px solid var(--black);
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(1.1);
+}
+
+/* 4. Bike Delivery Animation (The "Basilico" Effect) */
+.shape-animate2 {
+    will-change: transform;
+    animation: slowPatrol 10s ease-in-out infinite;
+    display: inline-block;
+}
+
+@keyframes slowPatrol {
+    0% {
+        transform: translateX(0px) rotate(-14deg);
+    }
+    50% {
+        transform: translateX(60px) rotate(-10deg);
+    }
+    100% {
+        transform: translateX(0px) rotate(-14deg);
+    }
+}
+
+/* Vertical bobbing to simulate driving on a road */
+.shape-animate2 img {
+    animation: bikeBob 2.5s ease-in-out infinite;
+}
+
+@keyframes bikeBob {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+/* 5. Feature & Service Cards */
+.feature-card {
+    background-color: #f9f9f9;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #eee;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.floating-icon {
+    width: 5rem;
+    height: 5rem;
+    background: var(--white);
+    border-radius: 50%;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -4.5rem auto 1.5rem auto; /* Creates the "halfway-out" look */
+}
+
+/* 6. Opening Hours Card Styling */
+.hours-card {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    border-top: 4px solid var(--primary);
+    box-shadow: 15px 15px 0px rgba(249, 222, 70, 0.1);
+}
+
+/* 7. Menu Item Dots & Price Styling */
+.menu-dot-line {
+    flex-grow: 1;
+    border-bottom: 2px dotted #ccc;
+    margin: 0 10px;
+    position: relative;
+    top: -5px;
+}
+
+.price-tag {
+    font-weight: 900;
+    color: #B49164; /* Bronze Coffee color */
+}
+
+/* 8. Mobile Menu Responsiveness */
+#mobile-menu {
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+#mobile-menu.active {
+    max-height: 500px; /* Adjust based on content */
+}
+
+
+
