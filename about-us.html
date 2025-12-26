@@ -39,51 +39,47 @@
 
 <body class="bg-black text-white overflow-x-hidden">
 
-    <nav class="fixed w-full z-50 bg-logo-yellow border-b border-black/10 shadow-md">
-        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-
-            <div class="flex items-center gap-3">
-                <div class="  flex items-center justify-center overflow-hidden cafe-logo">
-                    <img src="./img/Restro_logo.png" alt="Shree Ji Radha Rani Logo"
-                        class="w-100 h-100 object-contain scale-110">
-                </div>
-            </div>
-
-            <ul class="hidden md:flex space-x-8 font-bold text-[16px] uppercase tracking-widest text-black">
-                <li><a href="index.html" class="hover:underline underline-offset-4">Home</a></li>
-                <li><a href="about.html" class="hover:underline underline-offset-4">About Us</a></li>
-                <li><a href="menu.html" class="hover:underline underline-offset-4">Our Menu</a></li>
-                <li><a href="services.html" class="hover:underline underline-offset-4">Services</a></li>
-                <li><a href="contact.html" class="hover:underline underline-offset-4">Contact</a></li>
-            </ul>
-
-            <div class="flex items-center gap-4">
-                <button
-                    class="hidden sm:block bg-black text-white px-5 py-2 font-black rounded-full text-[14px] uppercase hover:scale-105 transition-all">
-                    Book Table
-                </button>
-
-                <button id="menu-btn" class="md:hidden text-black focus:outline-none">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
+     <nav class="fixed w-full z-50 bg-logo-yellow border-b border-black/10 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+        
+        <div class="flex items-center gap-3">
+            <div class="  flex items-center justify-center overflow-hidden cafe-logo">
+                <img src="./img/Restro_logo.png" alt="Shree Ji Radha Rani Logo" class="w-100 h-100 object-contain scale-110">
             </div>
         </div>
 
-        <div id="mobile-menu"
-            class="hidden md:hidden bg-logo-yellow border-t border-black/10 transition-all duration-300">
-            <ul class="flex flex-col p-6 space-y-4 font-black uppercase text-sm tracking-widest">
-                <li><a href="index.html" class="block py-2 border-b border-black/5">Home</a></li>
-                <li><a href="about.html" class="block py-2 border-b border-black/5">About Us</a></li>
-                <li><a href="menu.html" class="block py-2 border-b border-black/5">Our Menu</a></li>
-                <li><a href="services.html" class="block py-2 border-b border-black/5">Services</a></li>
-                <li><a href="contact.html" class="block py-2 border-b border-black/5">Contact</a></li>
-                <li><button class="w-full bg-black text-white py-4 mt-4 rounded-lg">Book Table</button></li>
-            </ul>
+        <ul class="hidden md:flex space-x-8 font-bold text-[16px] uppercase tracking-widest text-black">
+            <li><a href="index.html" class="hover:underline underline-offset-4">Home</a></li>
+            <li><a href="about-us.html" class="hover:underline underline-offset-4">About Us</a></li>
+            <li><a href="menu.html" class="hover:underline underline-offset-4">Our Menu</a></li>
+            <li><a href="gallery.html" class="hover:underline underline-offset-4">Gallery</a></li>
+            <li><a href="contact-us.html" class="hover:underline underline-offset-4">Contact</a></li>
+        </ul>
+
+        <div class="flex items-center gap-4">
+            <button class="hidden sm:block bg-black text-white px-5 py-2 font-black rounded-full text-[14px] uppercase hover:scale-105 transition-all">
+                Book Table
+            </button>
+            
+            <button id="menu-btn" class="md:hidden text-black focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
         </div>
-    </nav>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-logo-yellow border-t border-black/10 transition-all duration-300">
+        <ul class="flex flex-col p-6 space-y-4 font-black uppercase text-sm tracking-widest">
+            <li><a href="index.html" class="block py-2 border-b border-black/5">Home</a></li>
+            <li><a href="about.html" class="block py-2 border-b border-black/5">About Us</a></li>
+            <li><a href="menu.html" class="block py-2 border-b border-black/5">Our Menu</a></li>
+            <li><a href="gallery.html" class="block py-2 border-b border-black/5">Gallery</a></li>
+            <li><a href="contact.html" class="block py-2 border-b border-black/5">Contact</a></li>
+            <li><button class="w-full bg-black text-white py-4 mt-4 rounded-lg">Book Table</button></li>
+        </ul>
+    </div>
+</nav>
 
 
     <!-- about us page -->
@@ -412,14 +408,13 @@
         </div>
     </section>
 
-    <footer id="contact" class="bg-black py-20">
+     <footer id="contact" class="bg-black py-20">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-16">
             <div>
                 <div class="text-3xl font-black italic mb-6 uppercase cafe-logo ">
                     <img src="./img/Restrofinal2.png" alt="">
                 </div>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Redefining the modern cafe experience with bold
-                    colors and bolder coffee. Visit us today.</p>
+                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Redefining the modern cafe experience with bold colors and bolder coffee. Visit us today.</p>
                 <div class="space-x-4">
                     <a href="#" class="text-yellow-400 hover:text-white transition-colors">Instagram</a>
                     <a href="#" class="text-yellow-400 hover:text-white transition-colors">Facebook</a>
@@ -428,22 +423,22 @@
             </div>
             <div>
                 <h4 class="font-black uppercase mb-6 text-yellow-400 italic">Location & Hours</h4>
-                <p class="text-gray-400 text-sm">123 Brew Street, Design District<br>Manhattan, NY 10001</p>
-                <p class="mt-4 text-gray-400 text-sm">Mon - Fri: 7am - 9pm<br>Sat - Sun: 8am - 10pm</p>
+                <p class="text-gray-400 text-sm">Ram Mandir, Infront of Ram Market<br>Lashkar,Gwalior</p>
+                <p class="mt-4 text-gray-400 text-sm">Mon - Fri: 10:30am - 11pm<br>Sat - Sun: 10am - 11pm</p>
             </div>
             <div>
                 <h4 class="font-black uppercase mb-6 text-yellow-400 italic">Get In Touch</h4>
-                <p class="text-gray-400 text-sm">P: (555) 123-4567<br>E: hello@koacafe.com</p>
-                <button
-                    class="mt-6 w-full border border-yellow-400 py-3 font-black text-yellow-400 uppercase text-xs hover:bg-yellow-400 hover:text-black transition-all">Get
-                    Directions</button>
+                <p class="text-gray-400 text-sm">+91 7725858169 | 7827937411 <br>E: hello@koacafe.com</p>
+                <button class="mt-6 w-full border border-yellow-400 py-3 font-black text-yellow-400 uppercase text-xs hover:bg-yellow-400 hover:text-black transition-all">
+                    <a href="https://maps.app.goo.gl/HR3HpqWJeb51aMyB7" target="_blank">Get Directions</a>
+                </button>
             </div>
         </div>
-        <div
-            class="text-center mt-20 pt-10 border-t border-white/5 text-[10px] uppercase tracking-widest text-gray-600">
-            &copy; 2024 KOA CAFE. All Rights Reserved. Crafted for Taste.
+        <div class="text-center mt-20 pt-10 border-t border-white/5 text-[10px] uppercase tracking-widest text-gray-600">
+            &copy; 2026 Shree Ji Radha Rani. All Rights Reserved. Crafted for Taste.
         </div>
     </footer>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

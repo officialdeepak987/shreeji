@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
@@ -33,321 +34,146 @@
         .border-logo-yellow {
             border-color: #f9de46;
         }
+
+        .gallery-item img {
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .gallery-item:hover img {
+        transform: scale(1.05);
+        filter: grayscale(0);
+    }
     </style>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body class="bg-black text-white overflow-x-hidden">
 
-    <nav class="fixed w-full z-50 bg-logo-yellow border-b border-black/10 shadow-md">
-        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-
-            <div class="flex items-center gap-3">
-                <div class="  flex items-center justify-center overflow-hidden cafe-logo">
-                    <img src="./img/Restro_logo.png" alt="Shree Ji Radha Rani Logo"
-                        class="w-100 h-100 object-contain scale-110">
-                </div>
-            </div>
-
-            <ul class="hidden md:flex space-x-8 font-bold text-[16px] uppercase tracking-widest text-black">
-                <li><a href="index.html" class="hover:underline underline-offset-4">Home</a></li>
-                <li><a href="about.html" class="hover:underline underline-offset-4">About Us</a></li>
-                <li><a href="menu.html" class="hover:underline underline-offset-4">Our Menu</a></li>
-                <li><a href="services.html" class="hover:underline underline-offset-4">Services</a></li>
-                <li><a href="contact.html" class="hover:underline underline-offset-4">Contact</a></li>
-            </ul>
-
-            <div class="flex items-center gap-4">
-                <button
-                    class="hidden sm:block bg-black text-white px-5 py-2 font-black rounded-full text-[14px] uppercase hover:scale-105 transition-all">
-                    Book Table
-                </button>
-
-                <button id="menu-btn" class="md:hidden text-black focus:outline-none">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <div id="mobile-menu"
-            class="hidden md:hidden bg-logo-yellow border-t border-black/10 transition-all duration-300">
-            <ul class="flex flex-col p-6 space-y-4 font-black uppercase text-sm tracking-widest">
-                <li><a href="index.html" class="block py-2 border-b border-black/5">Home</a></li>
-                <li><a href="about.html" class="block py-2 border-b border-black/5">About Us</a></li>
-                <li><a href="menu.html" class="block py-2 border-b border-black/5">Our Menu</a></li>
-                <li><a href="services.html" class="block py-2 border-b border-black/5">Services</a></li>
-                <li><a href="contact.html" class="block py-2 border-b border-black/5">Contact</a></li>
-                <li><button class="w-full bg-black text-white py-4 mt-4 rounded-lg">Book Table</button></li>
-            </ul>
-        </div>
-    </nav>
-
-
-    <!-- about us page -->
-
-    <section class="relative bg-[#FCF8F1] overflow-hidden py-20 lg:py-32">
-    
-    <div class="absolute left-[-100px] top-1/2 -translate-y-1/2 hidden xl:block opacity-90 rotate-12">
-        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=400" 
-             alt="Delicious Dish" 
-             class="w-[350px] drop-shadow-2xl">
-    </div>
-
-    <div class="absolute right-[-100px] top-1/2 -translate-y-1/2 hidden xl:block opacity-90 -rotate-12">
-        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=400" 
-             alt="Healthy Meal" 
-             class="w-[350px] drop-shadow-2xl">
-    </div>
-
-    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+   <nav class="fixed w-full z-50 bg-logo-yellow border-b border-black/10 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
         
-        <div class="flex items-center justify-center gap-4 mb-6">
-            <span class="w-12 h-[1px] bg-black/20"></span>
-            <span class="text-xs font-bold uppercase tracking-[0.4em] text-gray-500">About Restaurant</span>
-            <span class="w-12 h-[1px] bg-black/20"></span>
+        <div class="flex items-center gap-3">
+            <div class="  flex items-center justify-center overflow-hidden cafe-logo">
+                <img src="./img/Restro_logo.png" alt="Shree Ji Radha Rani Logo" class="w-100 h-100 object-contain scale-110">
+            </div>
         </div>
 
-        <h1 class="text-4xl md:text-7xl font-serif text-black leading-tight mb-8">
-            Enjoy an Exceptional <br>
-            <span class="italic text-[#f9de46] drop-shadow-sm" style="-webkit-text-stroke: 1px black;">Journey of Taste</span>
-        </h1>
+        <ul class="hidden md:flex space-x-8 font-bold text-[16px] uppercase tracking-widest text-black">
+            <li><a href="index.html" class="hover:underline underline-offset-4">Home</a></li>
+            <li><a href="about-us.html" class="hover:underline underline-offset-4">About Us</a></li>
+            <li><a href="menu.html" class="hover:underline underline-offset-4">Our Menu</a></li>
+            <li><a href="gallery.html" class="hover:underline underline-offset-4">Gallery</a></li>
+            <li><a href="contact-us.html" class="hover:underline underline-offset-4">Contact</a></li>
+        </ul>
 
-        <div class="space-y-6 max-w-2xl mx-auto text-gray-600 leading-relaxed text-sm md:text-base">
-            <p>
-                Our buzzy food-hall style concept is inspired by international dining styles, especially in Asia. 
-                Explore the following fast-action food stations as busy chefs perform at <span class="text-black font-bold">Shree Ji Radha Rani.</span>
-            </p>
+        <div class="flex items-center gap-4">
+            <button class="hidden sm:block bg-black text-white px-5 py-2 font-black rounded-full text-[14px] uppercase hover:scale-105 transition-all">
+                Book Table
+            </button>
             
-            <p>
-                Enjoy a verdant Garden to Glass experience. It's in the view, it's reflected in the design, and it infuses many drinks. 
-                In fact, all our delicious fresh ingredients are sustainably picked from our local partners. Our flourishing range of coffees, 
-                mocktails, and snacks are all made with integrity and offer something for every guest.
-            </p>
-        </div>
-
-        <div class="mt-12">
-            <button class="border-2 border-black px-10 py-4 font-black uppercase text-xs tracking-[0.2em] hover:bg-[#f9de46] hover:border-[#f9de46] transition-all duration-300">
-                Book A Table
+            <button id="menu-btn" class="md:hidden text-black focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
             </button>
         </div>
-
     </div>
-    </section>
-    <!-- end aout us page -->
 
-    <section class="bg-yellow-400 py-12">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-black text-center">
-            <div>
-                <h3 class="text-4xl font-black">12k+</h3>
-                <p class="font-bold uppercase text-xs">Cups Served</p>
-            </div>
-            <div>
-                <h3 class="text-4xl font-black">24/7</h3>
-                <p class="font-bold uppercase text-xs">Fresh Roasts</p>
-            </div>
-            <div>
-                <h3 class="text-4xl font-black">15+</h3>
-                <p class="font-bold uppercase text-xs">Unique Blends</p>
-            </div>
-            <div>
-                <h3 class="text-4xl font-black">4.9</h3>
-                <p class="font-bold uppercase text-xs">Google Rating</p>
-            </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-logo-yellow border-t border-black/10 transition-all duration-300">
+        <ul class="flex flex-col p-6 space-y-4 font-black uppercase text-sm tracking-widest">
+            <li><a href="index.html" class="block py-2 border-b border-black/5">Home</a></li>
+            <li><a href="about.html" class="block py-2 border-b border-black/5">About Us</a></li>
+            <li><a href="menu.html" class="block py-2 border-b border-black/5">Our Menu</a></li>
+            <li><a href="gallery.html" class="block py-2 border-b border-black/5">Gallery</a></li>
+            <li><a href="contact.html" class="block py-2 border-b border-black/5">Contact</a></li>
+            <li><button class="w-full bg-black text-white py-4 mt-4 rounded-lg">Book Table</button></li>
+        </ul>
+    </div>
+</nav>
+
+
+ 
+
+    <!--  gallery section starty -->
+
+    <section id="gallery" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="text-center mb-4 py-16">
+            <span class="text-red-500 font-bold uppercase tracking-[0.3em] text-xs">Our Moments</span>
+            <h2 class="text-4xl md:text-6xl font-black text-black mt-2">Captured <span class="text-[#f9de46]  px-2">Vibes.</span></h2>
+            <div class="w-20 h-1.5 bg-[#f9de46] mx-auto mt-6 rounded-full"></div>
         </div>
-    </section>
 
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-
-            <div class="text-center mb-16">
-                <span class="text-red-400 font-bold uppercase tracking-[0.3em] text-xs">Features</span>
-                <h2 class="text-3xl md:text-5xl font-black text-black mt-2">Get a many of interesting<br>features.</h2>
+        <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-2 space-y-4">
+            
+            <div class="gallery-item relative overflow-hidden rounded-2xl break-inside-avoid shadow-lg">
+                <a href="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80" data-fancybox="gallery" data-caption="Our Cozy Interior">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=600" 
+                         alt="Cafe" class="w-full grayscale hover:grayscale-0 transition-all duration-500 cursor-zoom-in">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-black uppercase text-xs tracking-widest border border-white px-4 py-2">View Full</span>
+                    </div>
+                </a>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-                <div class="relative group pt-12 text-center">
-                    <div
-                        class="bg-gray-50 rounded-2xl p-8 pt-16 shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300">
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-24 bg-white rounded-full shadow-md flex items-center justify-center border border-gray-100">
-                            <img src="https://cdn-icons-png.flaticon.com/512/3306/3306613.png" alt="Menu"
-                                class="w-12 h-12">
-                        </div>
-                        <h3 class="text-xl font-bold text-black mb-3">Menu variations</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Sed ut perspiciatis unde omnis iste natus
-                            error</p>
-                        <a href="#menu"
-                            class="text-[#f9de46] font-bold text-sm flex items-center justify-center gap-2 group-hover:gap-3 transition-all">
-                            Learn More <span class="text-lg">›</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="relative group pt-12 text-center">
-                    <div
-                        class="bg-gray-50 rounded-2xl p-8 pt-16 shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300">
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-24 bg-white rounded-full shadow-md flex items-center justify-center border border-gray-100">
-                            <img src="https://cdn-icons-png.flaticon.com/512/1830/1830839.png" alt="Cooking"
-                                class="w-12 h-12">
-                        </div>
-                        <h3 class="text-xl font-bold text-black mb-3">Cooking warm</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Sed ut perspiciatis unde omnis iste natus
-                            error</p>
-                        <a href="#about"
-                            class="text-[#f9de46] font-bold text-sm flex items-center justify-center gap-2 group-hover:gap-3 transition-all">
-                            Learn More <span class="text-lg">›</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="relative group pt-12 text-center">
-                    <div
-                        class="bg-gray-50 rounded-2xl p-8 pt-16 shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300">
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-24 bg-white rounded-full shadow-md flex items-center justify-center border border-gray-100">
-                            <img src="https://cdn-icons-png.flaticon.com/512/3461/3461935.png" alt="Chef"
-                                class="w-12 h-12">
-                        </div>
-                        <h3 class="text-xl font-bold text-black mb-3">Best chef</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Sed ut perspiciatis unde omnis iste natus
-                            error</p>
-                        <a href="#team"
-                            class="text-[#f9de46] font-bold text-sm flex items-center justify-center gap-2 group-hover:gap-3 transition-all">
-                            Learn More <span class="text-lg">›</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="relative group pt-12 text-center">
-                    <div
-                        class="bg-gray-50 rounded-2xl p-8 pt-16 shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300">
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-24 bg-white rounded-full shadow-md flex items-center justify-center border border-gray-100">
-                            <img src="https://cdn-icons-png.flaticon.com/512/737/737967.png" alt="Fast Food"
-                                class="w-12 h-12">
-                        </div>
-                        <h3 class="text-xl font-bold text-black mb-3">Fast food</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Sed ut perspiciatis unde omnis iste natus
-                            error</p>
-                        <a href="#services"
-                            class="text-[#f9de46] font-bold text-sm flex items-center justify-center gap-2 group-hover:gap-3 transition-all">
-                            Learn More <span class="text-lg">›</span>
-                        </a>
-                    </div>
-                </div>
-
+            <div class="gallery-item relative overflow-hidden rounded-2xl break-inside-avoid shadow-lg">
+                <a href="https://images.unsplash.com/photo-1511081692775-05d0f180a065?q=80" data-fancybox="gallery" data-caption="Premium Coffee Roast">
+                    <img src="https://images.unsplash.com/photo-1511081692775-05d0f180a065?q=80&w=600" 
+                         alt="Coffee" class="w-full grayscale hover:grayscale-0 transition-all duration-500 cursor-zoom-in">
+                </a>
             </div>
+
+            <div class="gallery-item relative overflow-hidden rounded-2xl break-inside-avoid shadow-lg">
+                <a href="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80" data-fancybox="gallery" data-caption="Special Pizza">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=600" 
+                         alt="Food" class="w-full grayscale hover:grayscale-0 transition-all duration-500 cursor-zoom-in">
+                </a>
+            </div>
+
+            <div class="gallery-item relative overflow-hidden rounded-2xl break-inside-avoid shadow-lg">
+                <a href="./img/c1.jpeg " data-fancybox="gallery" data-caption="Chef Specials">
+                    <img src="./img/c1.jpeg" alt="Specialty" class="w-full grayscale hover:grayscale-0 transition-all duration-500">
+                </a>
+            </div>
+            <div class="gallery-item relative overflow-hidden rounded-2xl break-inside-avoid shadow-lg">
+                <a href="./img/c2.jpeg " data-fancybox="gallery" data-caption="Chef Specials">
+                    <img src="./img/c2.jpeg" alt="Specialty" class="w-full grayscale hover:grayscale-0 transition-all duration-500">
+                </a>
+            </div>
+            <div class="gallery-item relative overflow-hidden rounded-2xl break-inside-avoid shadow-lg">
+                <a href="./img/c3.jpeg " data-fancybox="gallery" data-caption="Chef Specials">
+                    <img src="./img/c3.jpeg" alt="Specialty" class="w-full grayscale hover:grayscale-0 transition-all duration-500">
+                </a>
+            </div>
+            <div class="gallery-item relative overflow-hidden rounded-2xl break-inside-avoid shadow-lg">
+                <a href="./img/c4.jpeg " data-fancybox="gallery" data-caption="Chef Specials">
+                    <img src="./img/c4.jpeg" alt="Specialty" class="w-full grayscale hover:grayscale-0 transition-all duration-500">
+                </a>
+            </div>
+            <div class="gallery-item relative overflow-hidden rounded-2xl break-inside-avoid shadow-lg">
+                <a href="./img/c5.jpeg " data-fancybox="gallery" data-caption="Chef Specials">
+                    <img src="./img/c5.jpeg" alt="Specialty" class="w-full grayscale hover:grayscale-0 transition-all duration-500">
+                </a>
+            </div>
+            <div class="gallery-item relative overflow-hidden rounded-2xl break-inside-avoid shadow-lg">
+                <a href="./img/c6.jpeg " data-fancybox="gallery" data-caption="Chef Specials">
+                    <img src="./img/c6.jpeg" alt="Specialty" class="w-full grayscale hover:grayscale-0 transition-all duration-500">
+                </a>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- about and timeing -->
+    <!-- end -->
 
-    <section id="about" class="py-20 bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-
-                <div class="lg:col-span-4 relative group">
-                    <div
-                        class="absolute -inset-2 border-2 border-[#f9de46] rounded-xl translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-all duration-500">
-                    </div>
-                    <div class="relative overflow-hidden rounded-xl shadow-2xl h-[500px]">
-                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070"
-                            alt="Shree Ji Radha Rani Interior"
-                            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
-                    </div>
-                </div>
-
-                <div class="lg:col-span-5 space-y-6">
-                    <div class="flex items-center gap-2">
-                        <span class="w-8 h-[2px] bg-[#f9de46]"></span>
-                        <span class="text-xs font-bold uppercase tracking-widest text-gray-500">Cafe Shop Since
-                            2023</span>
-                    </div>
-
-                    <h2 class="text-4xl md:text-5xl font-black text-black leading-[1.1] uppercase italic">
-                        We are not your<br>average <span class="text-[#f9de46] bg-black px-2">coffee shop</span>
-                    </h2>
-
-                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">
-                        We offer some of the best locally roasted coffee and authentic delicacies.
-                        At <span class="font-bold text-black">Shree Ji Radha Rani</span>, we believe in "Pure Taste,
-                        Pure Love."
-                        Whether you enjoy a dark roast or a creamy latte, our specialty blends are crafted to
-                        perfection.
-                    </p>
-
-                    <p class="text-gray-500 text-sm italic border-l-4 border-[#f9de46] pl-4">
-                        There are many variations of flavors, but the majority have been crafted with pure devotion.
-                    </p>
-
-                    <button
-                        class="bg-[#f9de46] text-black px-8 py-4 font-black uppercase text-xs tracking-widest hover:bg-black hover:text-white transition-all shadow-lg">
-                        Click to Read More
-                    </button>
-                </div>
-
-                <div class="lg:col-span-3 relative mt-12 lg:mt-0">
-                    <div class="absolute inset-0 bg-[#f9de46]/20 rounded-2xl translate-x-4 translate-y-4"></div>
-
-                    <div
-                        class="relative bg-[#2D2A26] text-white p-8 rounded-2xl shadow-2xl border-t-4 border-[#f9de46]">
-                        <h3
-                            class="text-2xl font-black uppercase italic tracking-wider mb-8 border-b border-white/10 pb-4">
-                            Hour <span class="text-[#f9de46]">Opening</span>
-                        </h3>
-
-                        <div class="space-y-4 text-sm font-medium">
-                            <div class="flex justify-between items-center border-b border-white/5 pb-2">
-                                <span class="text-gray-400">Monday</span>
-                                <span>7:00 – 21:00</span>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-white/5 pb-2">
-                                <span class="text-gray-400">Tuesday</span>
-                                <span>7:00 – 21:00</span>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-white/5 pb-2">
-                                <span class="text-gray-400">Wednesday</span>
-                                <span>7:00 – 21:00</span>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-white/5 pb-2">
-                                <span class="text-gray-400">Thursday</span>
-                                <span>7:00 – 21:00</span>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-white/5 pb-2">
-                                <span class="text-gray-400">Friday</span>
-                                <span class="text-[#f9de46]">8:00 – 21:00</span>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-white/5 pb-2">
-                                <span class="text-gray-400">Saturday</span>
-                                <span>7:00 – 22:00</span>
-                            </div>
-                            <div class="flex justify-between items-center text-red-400">
-                                <span>Sunday</span>
-                                <span class="font-black uppercase tracking-widest">Closed</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- end time -->
-
-    <footer id="contact" class="bg-black py-20">
+     <footer id="contact" class="bg-black py-20">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-16">
             <div>
                 <div class="text-3xl font-black italic mb-6 uppercase cafe-logo ">
                     <img src="./img/Restrofinal2.png" alt="">
                 </div>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Redefining the modern cafe experience with bold
-                    colors and bolder coffee. Visit us today.</p>
+                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Redefining the modern cafe experience with bold colors and bolder coffee. Visit us today.</p>
                 <div class="space-x-4">
                     <a href="#" class="text-yellow-400 hover:text-white transition-colors">Instagram</a>
                     <a href="#" class="text-yellow-400 hover:text-white transition-colors">Facebook</a>
@@ -356,24 +182,24 @@
             </div>
             <div>
                 <h4 class="font-black uppercase mb-6 text-yellow-400 italic">Location & Hours</h4>
-                <p class="text-gray-400 text-sm">123 Brew Street, Design District<br>Manhattan, NY 10001</p>
-                <p class="mt-4 text-gray-400 text-sm">Mon - Fri: 7am - 9pm<br>Sat - Sun: 8am - 10pm</p>
+                <p class="text-gray-400 text-sm">Ram Mandir, Infront of Ram Market<br>Lashkar,Gwalior</p>
+                <p class="mt-4 text-gray-400 text-sm">Mon - Fri: 10:30am - 11pm<br>Sat - Sun: 10am - 11pm</p>
             </div>
             <div>
                 <h4 class="font-black uppercase mb-6 text-yellow-400 italic">Get In Touch</h4>
-                <p class="text-gray-400 text-sm">P: (555) 123-4567<br>E: hello@koacafe.com</p>
-                <button
-                    class="mt-6 w-full border border-yellow-400 py-3 font-black text-yellow-400 uppercase text-xs hover:bg-yellow-400 hover:text-black transition-all">Get
-                    Directions</button>
+                <p class="text-gray-400 text-sm">+91 7725858169 | 7827937411 <br>E: hello@koacafe.com</p>
+                <button class="mt-6 w-full border border-yellow-400 py-3 font-black text-yellow-400 uppercase text-xs hover:bg-yellow-400 hover:text-black transition-all">
+                    <a href="https://maps.app.goo.gl/HR3HpqWJeb51aMyB7" target="_blank">Get Directions</a>
+                </button>
             </div>
         </div>
-        <div
-            class="text-center mt-20 pt-10 border-t border-white/5 text-[10px] uppercase tracking-widest text-gray-600">
-            &copy; 2024 KOA CAFE. All Rights Reserved. Crafted for Taste.
+        <div class="text-center mt-20 pt-10 border-t border-white/5 text-[10px] uppercase tracking-widest text-gray-600">
+            &copy; 2026 Shree Ji Radha Rani. All Rights Reserved. Crafted for Taste.
         </div>
     </footer>
 
 
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const menuBtn = document.getElementById('menu-btn');
@@ -384,29 +210,17 @@
         });
 
 
-        // crousal
+        // fancybox
 
-        var swiper = new Swiper(".featureSwiper", {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
+        Fancybox.bind("[data-fancybox]", {
+        // Custom options for the "basilico" vibe
+        Transition: "fade",
+        Images: {
+            Panzoom: {
+                maxScale: 2,
             },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-next",
-                prevEl: ".swiper-prev",
-            },
-            breakpoints: {
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 4 },
-            },
-        });
+        },
+    });
     </script>
 
 </body>
